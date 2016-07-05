@@ -7,8 +7,8 @@ machine:
 
 general:
   branches:
-    only:
-      - none
+    ignore:
+      - master
 
 dependencies:
   pre:
