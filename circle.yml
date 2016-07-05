@@ -1,0 +1,18 @@
+---
+machine:
+  environment:
+    IMAGE_NAME: 'zacblazic/app'
+  services:
+    - docker
+
+general:
+  branches:
+    only:
+      - none
+
+dependencies:
+  pre:
+    - docker version
+    - docker info
+  override:
+    - docker build -t $IMAGE_NAME .
